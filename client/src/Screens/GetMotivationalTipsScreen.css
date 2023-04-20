@@ -1,0 +1,7 @@
+input[readonly] {
+    background-color: transparent !important;
+}
+
+textarea[readonly] {
+    background-color: transparent !important;
+}
