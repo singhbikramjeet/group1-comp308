@@ -1,0 +1,62 @@
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content-wrapper {
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 90%;
+  background: white;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.modal-content {
+  height: 100%;
+}
+
+.modal-body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.modal-header span {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.modal-header button {
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.modal-header button i {
+  font-size: 1.6rem;
+}
+
+.btn {
+  width: 100px;
+}
