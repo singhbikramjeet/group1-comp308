@@ -31,16 +31,16 @@ function EmergencyAlertForm() {
 
   return (
     <div className="container">
-      <h2>Emergency Alert Sender</h2>
-      <p>Your alert will automatically be sent to:</p>
+      <h2>This is an Emergency Alert page.</h2>
+      <p>The message you type will be automatically sent to:</p>
       <ul>
-        <li>Emergency Health Service</li>
-        <li>Your Hospital</li>
+        <li>Emergency Service Of Ontario</li>
+        <li>The hospital</li>
       </ul>
       <form onSubmit={sendAlert}>
-        <label>Message</label>
+        <label>Alert Message</label>
         <textarea className="form-control mb-2" rows={5} name="message" onChange={onChange}></textarea>
-        <button type="submit" className="btn btn-outline-primary">Send Alert</button>
+        <button type="submit" className="btn btn-outline-success">Send</button>
       </form>
     </div>
   )

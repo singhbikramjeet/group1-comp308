@@ -40,7 +40,7 @@ function DailyInfoScreen(props) {
         .post(apiUrl, data)
         .then((result) => {
             setShowLoading(false);
-            alert("Daily information is saved");
+            alert("Daily information has been saved!");
         }).catch((error)=> setShowLoading(false));
         setDailyInfo(() => ({
             bodyTemperature: 0, 
@@ -68,11 +68,11 @@ function DailyInfoScreen(props) {
                 )}
                 {profile ? (
                     <div className="container-fluid margins">
-                        <center><h2 className="mb-3">Add Daily Information</h2></center>
+                        <center><h2 className="mb-3">Add Your Daily Information</h2></center>
                         <Jumbotron className="bg-light p-4">
                             <Form onSubmit={saveDailyInfo}>
                                 <Form.Group>
-                                    <Form.Label>bodyTemperature (°C)</Form.Label>
+                                    <Form.Label>BODY TEMPERATURE(°C)</Form.Label>
                                     <Form.Control
                                     type="number"
                                     name="bodyTemperature"
@@ -85,7 +85,7 @@ function DailyInfoScreen(props) {
                                     />
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>heartRate (BPM)</Form.Label>
+                                    <Form.Label>HEART RATE(BPM)</Form.Label>
                                     <Form.Control
                                     type="text"
                                     name="heartRate"
@@ -95,21 +95,9 @@ function DailyInfoScreen(props) {
                                     required
                                     />
                                 </Form.Group>
+                                
                                 <Form.Group>
-                                    <Form.Label>systolic (mmHg)</Form.Label>
-                                    <Form.Control
-                                    type="number"
-                                    name="systolic"
-                                    id="systolic"
-                                    min="1"
-                                    step="0.1"
-                                    value={dailyInfo.systolic}
-                                    onChange={onChange}
-                                    required
-                                    />
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>diastolic (mmHg)</Form.Label>
+                                    <Form.Label>DIASTOLIC(mmHg)</Form.Label>
                                     <Form.Control
                                     type="number"
                                     name="diastolic"
@@ -122,7 +110,20 @@ function DailyInfoScreen(props) {
                                     />
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>Respiratory Rate (BPM)</Form.Label>
+                                    <Form.Label>SYSTOLIC(mmHg)</Form.Label>
+                                    <Form.Control
+                                    type="number"
+                                    name="systolic"
+                                    id="systolic"
+                                    min="1"
+                                    step="0.1"
+                                    value={dailyInfo.systolic}
+                                    onChange={onChange}
+                                    required
+                                    />
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>RESPIRATORY RATE(BPM)</Form.Label>
                                     <Form.Control
                                     type="number"
                                     name="respiratoryRate"
@@ -137,7 +138,7 @@ function DailyInfoScreen(props) {
                                 
                                 <div className="text-center">
                                     <Button variant="outline-primary col-6 mt-3" type="submit">
-                                        Save
+                                        SAVE
                                     </Button>
                                 </div>
                             </Form>

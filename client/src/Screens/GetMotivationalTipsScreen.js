@@ -13,10 +13,10 @@ function MotivationalTipsScreen() {
       {profile ? (
         <>
           {profile.motivationalTips.length === 0 ? 'No Record' : (
-            <Form className="register-form" method="get" action="http://youtu.be/c06dTj0v0sM" target="_blank">
-              <h2>Motivational Tips</h2>
+            <Form className="register-form" method="get" action="https://youtu.be/2NtbRSzTXSI" target="_blank">
+              <h2>Recommended Motivational Tips! </h2>
               <Form.Group>
-                <Form.Label>Last updated at:</Form.Label>
+                <Form.Label>LAST UPDATED AT:</Form.Label>
                 <Form.Control
                   type="text"
                   className="form-control w-25"
@@ -26,7 +26,7 @@ function MotivationalTipsScreen() {
                 />
               </Form.Group>
               <Form.Group>
-                <Form.Label>Daily tip from nurse:</Form.Label>
+                <Form.Label>TIPS FROM NURSE FOR YOUR WELL BEING:</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}
@@ -38,7 +38,7 @@ function MotivationalTipsScreen() {
               </Form.Group>
               <br />
               <Button variant="primary" type="submit" style={{ width: "300px" }}>
-                Watch Motivational Video
+                WATCH OUR MOTIVATIONAL VIDEO.
               </Button>
             </Form>
           )}

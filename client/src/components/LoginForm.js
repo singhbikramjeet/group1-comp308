@@ -43,15 +43,15 @@ function LoginForm(props) {
   return (
     <div className="container w-25">
       <article className="card-body">
-        <Link to="/signup" className="float-right btn btn-outline-primary">Sign up</Link>
-        <h4 className="card-title mb-4 mt-1">Log in</h4>
+        <Link to="/signup" className="float-right btn btn-outline-primary">SIGN UP</Link>
+        <h4 className="card-title mb-4 mt-1">LOGIN</h4>
         <form onSubmit={onSubmit}>
           <div className="form-group">
             <div className="input-group">
               <div className="input-group-prepend">
                 <span className="input-group-text"> <i className="fa fa-user"></i> </span>
               </div>
-              <input name="email" className="form-control" placeholder="Email or login" type="email" onChange={onChange} required />
+              <input name="email" className="form-control" placeholder="EMAIL OR LOGIN" type="email" onChange={onChange} required />
             </div>
           </div>
           <div className="form-group">
@@ -59,7 +59,7 @@ function LoginForm(props) {
               <div className="input-group-prepend">
                 <span className="input-group-text"> <i className="fa fa-lock"></i> </span>
               </div>
-              <input name="password" className="form-control" placeholder="******" type="password" onChange={onChange} required />
+              <input name="password" className="form-control" placeholder="*******" type="password" onChange={onChange} required />
             </div>
           </div>
           <div className="form-group">
@@ -68,7 +68,7 @@ function LoginForm(props) {
             </div>
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-primary btn-block"> Login  </button>
+            <button type="submit" className="btn btn-primary btn-block"> LOGIN  </button>
           </div>
         </form>
       </article>

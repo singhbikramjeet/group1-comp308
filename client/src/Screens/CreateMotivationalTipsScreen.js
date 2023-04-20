@@ -17,7 +17,7 @@ function MotivationalTipsScreen(props) {
       updatedBy: profile._id,
     }
     axios.post('/api/user/newMotivationalTips', newRecord)
-      .then(res => props.history.push(res.data), alert("Daily motivational tip is saved"))
+      .then(res => props.history.push(res.data), alert("Daily motivational tip has been saved!"))
       .catch(err => alert(err.response.data.msg))
       setNewMotivationalTips(() => ({
         patientEmail: '', 
@@ -32,13 +32,14 @@ function MotivationalTipsScreen(props) {
   
   return (
     <div className="container">
-      <h2>Motivational Tips</h2>
+      <h2>Provide Some Motivational Tips for Our Patients.</h2>
       <Form className="register-form" onSubmit={handleOnSubmit}>
         <Form.Group>
-          <Form.Label>Patient Email:</Form.Label>
+          <Form.Label>PATIENT EMAIL:</Form.Label>
           <Form.Control
             type="text"
             className="form-control w-25"
+            placeholder="Enter Patient Email Address"
             name="patientEmail"
             value={newMotivationalTips.patientEmail}
             required
@@ -46,11 +47,12 @@ function MotivationalTipsScreen(props) {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Tip:</Form.Label>
+          <Form.Label>TIPS:</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
             className="form-control w-50"
+            placeholder="Provide some tips for the patient."
             name="tip"
             value={newMotivationalTips.tip}
             required

@@ -2,7 +2,7 @@
 function MotivationalTipsScreen() {
   return (
     <div className="container">
-      Motivational Tips Screen
+      MOTIVATIONAL TIPS!
     </div>
   )
 }

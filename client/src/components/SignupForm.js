@@ -30,51 +30,51 @@ function SignupForm(props) {
   return (
     <div className="container signup-form">
       <article className="card-body">
-        <Link to="/login" className="float-right btn btn-outline-primary">Log in</Link>
-        <h4 className="card-title mb-4 mt-1">Sign up</h4>
+        <Link to="/login" className="float-right btn btn-outline-primary">LOGIN</Link>
+        <h4 className="card-title mb-4 mt-1">SIGN UP</h4>
         <form onSubmit={onSubmit}>
             <div className="form-group row">
-              <label className="col-form-label col-4">Email</label>
-              <input name="email" className="form-control col-8" type="email" onChange={onChange} required />
+              <label className="col-form-label col-4">EMAIL</label>
+              <input name="email" placeholder="Enter email" className="form-control col-8" type="email" onChange={onChange} required />
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">Password</label>
-              <input name="password" className="form-control col-8" type="password" onChange={onChange} required />
+              <label className="col-form-label col-4">PASSWORD</label>
+              <input name="password" placeholder="Enter password" className="form-control col-8" type="password" onChange={onChange} required />
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">First Name</label>
-              <input name="firstName" className="form-control col-8" type="text" onChange={onChange} required />
+              <label className="col-form-label col-4">FIRST NAME</label>
+              <input name="firstName" placeholder="Enter First Name" className="form-control col-8" type="text" onChange={onChange} required />
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">Last Name</label>
-              <input name="lastName" className="form-control col-8" type="text" onChange={onChange} required />
+              <label className="col-form-label col-4">LAST NAME</label>
+              <input name="lastName" placeholder="Enter Last Name"className="form-control col-8" type="text" onChange={onChange} required />
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">Phone</label>
-              <input name="phone" className="form-control col-8" type="text" onChange={onChange} required />
+              <label className="col-form-label col-4">CONTACT</label>
+              <input name="phone" placeholder="Enter Contact Number" className="form-control col-8" type="text" onChange={onChange} required />
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">Birth</label>
-              <input name="birth" className="form-control col-8" type="date" onChange={onChange} required />
+              <label className="col-form-label col-4">DATE OF BIRTH</label>
+              <input name="birth" placeholder="Enter DOB" className="form-control col-8" type="date" onChange={onChange} required />
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">Gender</label>
+              <label className="col-form-label col-4">GENDER</label>
               <select className="form-control col-8" name="gender" value={user.gender} onChange={onChange} required>
                 <option key="" value="">Select Gender</option>
-                <option key="Female">Female</option>
-                <option key="Male">Male</option>
+                <option key="Female">FEMALE</option>
+                <option key="Male">MALE</option>
               </select>
             </div>
             <div className="form-group row">
-              <label className="col-form-label col-4">Role</label>
+              <label className="col-form-label col-4">ROLE</label>
               <select className="form-control col-8" name="role" value={user.role} onChange={onChange} required>
                 <option key="" value="">Select Role</option>
-                <option key="0" value={0}>Patient</option>
-                <option key="1" value={1}>Nurse</option>
+                <option key="0" value={0}>PATIENT</option>
+                <option key="1" value={1}>NURSE</option>
               </select>
             </div>
           <div className="form-group row">
-            <button type="submit" className="btn btn-primary btn-block"> Sign up  </button>
+            <button type="submit" className="btn btn-primary btn-block">SIGN UP</button>
           </div>
         </form>
       </article>

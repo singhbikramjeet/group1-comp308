@@ -55,16 +55,16 @@ function PatientScreen() {
   return (
     <>
       <div className="container">
-        <h2>Patients</h2>
+        <h2>Patients Data</h2>
         <table className="table table-hover">
           <thead>
             <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Birth</th>
-              <th>Gender</th>
-              <th>Email</th>
-              <th>Phone</th>
+              <th>FIRST NAME</th>
+              <th>LAST NAME</th>
+              <th>DATE OF BIRTH</th>
+              <th>GENDER</th>
+              <th>EMAIL ADDRESS</th>
+              <th>CONTACT NUMBER</th>
             </tr>
           </thead>
           <tbody>
@@ -97,15 +97,15 @@ function PatientScreen() {
                   <table className="table table-hover">
                     <thead>
                       <tr>
-                        <th className="align-middle" rowSpan="2">Body Temperature (°C)</th>
-                        <th className="align-middle" rowSpan="2">Heart Rate (BPM)</th>
-                        <th className="align-middle" colSpan="2">Blood Pressure</th>
-                        <th className="align-middle" rowSpan="2">Respiratory Rate (BPM)</th>
-                        <th className="align-middle" rowSpan="2">Update At</th>
+                        <th className="align-middle" rowSpan="2">BODY TEMPERATURE(°C)</th>
+                        <th className="align-middle" rowSpan="2">HEART RATE(BPM)</th>
+                        <th className="align-middle" colSpan="2">BLOOD PRESSURE</th>
+                        <th className="align-middle" rowSpan="2">RESPIRATORY RATE(BPM)</th>
+                        <th className="align-middle" rowSpan="2">DATA UPDATED ON:</th>
                       </tr>
                       <tr>
-                        <th>Systolic (mmHg)</th>
-                        <th>Diastolic (mmHg)</th>
+                        <th>SYSTOLIC(mmHg)</th>
+                        <th>DIASTOLIC(mmHg)</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -127,7 +127,7 @@ function PatientScreen() {
                         <td><input className="form-control" type="number" name="systolic" onChange={onChange} required /></td>
                         <td><input className="form-control" type="number" name="diastolic" onChange={onChange} required /></td>
                         <td><input className="form-control" type="number" name="respiratoryRate" onChange={onChange} required /></td>
-                        <td><button className="btn btn-outline-primary btn-block" type="submit">New</button></td>
+                        <td><button className="btn btn-outline-success btn-block" type="submit">SUBMIT</button></td>
                       </tr>
                     </tbody>
                   </table>

@@ -41,28 +41,7 @@ function MedicalCheckListScreen() {
     const handleOnSubmit = (event) => {
         setShowLoading(true)
         event.preventDefault()
-        // const data = {
-        //     age: userValues.age,
-        //     sex: userValues.sex,
-        //     steroid: userValues.steroid,
-        //     antivirals: userValues.antivirals,
-        //     fatigue: userValues.fatigue,
-        //     malaise: userValues.malaise,
-        //     anorexia: userValues.anorexia,
-        //     liver_big: userValues.liver_big,
-        //     liver_firm: userValues.liver_firm,
-        //     spleen_palpable: userValues.spleen_palpable,
-        //     spiders: userValues.spiders,
-        //     ascites: userValues.ascites,
-        //     varices: userValues.varices,
-        //     bilurubin: userValues.bilurubin,
-        //     alk_phosphate: userValues.alk_phosphate,
-        //     sgot: userValues.sgot,
-        //     albumin: userValues.albumin,
-        //     protime: userValues.protime,
-        //     histology: userValues.histology
-        // };
-        // console.log(data)
+        
         axios
             .post(apiUrl, userValues)
             .then((result) => {
@@ -94,13 +73,14 @@ function MedicalCheckListScreen() {
                 )}
                 {profile ? (
                     <div className="container-fluid margins">
-                        <center><h2 className="mb-3">Use Medical Checklist for Hepatitis</h2></center>                        
+                        <center><h2 className="mb-3">Use this Checklist for Hepatitis</h2></center>                        
                         <Jumbotron className="bg-light p-4">
                             <Form onSubmit={handleOnSubmit}>
                                 <Form.Group>
-                                    <Form.Label>Age</Form.Label>
+                                    <Form.Label>AGE</Form.Label>
                                     <Form.Control className="col-5"
                                         type="number"
+                                        placeholder="Enter Age"
                                         name="age"
                                         id="age"
                                         value={userValues.age}
@@ -109,7 +89,7 @@ function MedicalCheckListScreen() {
                                     />
                                 </Form.Group>
                                 <Form.Group>
-                                    <Form.Label>Sex</Form.Label>
+                                    <Form.Label>SEX</Form.Label>
                                     <br />
                                     <input className="mr-2"
                                         type="radio"
@@ -174,182 +154,7 @@ function MedicalCheckListScreen() {
                                     />
                                     No
                                 </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Fatigue?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="fatigue"
-                                        id="yes"
-                                        value={userValues.fatigue}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="fatigue"
-                                        id="no"
-                                        value={userValues.fatigue}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Malaise?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="malaise"
-                                        id="yes"
-                                        value={userValues.malaise}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="malaise"
-                                        id="no"
-                                        value={userValues.malaise}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Anorexia?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="anorexia"
-                                        id="yes"
-                                        value={userValues.anorexia}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="anorexia"
-                                        id="no"
-                                        value={userValues.anorexia}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Big Liver?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="liver_big"
-                                        id="yes"
-                                        value={userValues.liver_big}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="liver_big"
-                                        id="no"
-                                        value={userValues.liver_big}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Big Firm?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="liver_firm"
-                                        id="yes"
-                                        value={userValues.liver_firm}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="liver_firm"
-                                        id="no"
-                                        value={userValues.liver_firm}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Spleen palpable?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="spleen_palpable"
-                                        id="yes"
-                                        value={userValues.spleen_palpable}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="spleen_palpable"
-                                        id="no"
-                                        value={userValues.spleen_palpable}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Spiders?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="spiders"
-                                        id="yes"
-                                        value={userValues.spiders}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="spiders"
-                                        id="no"
-                                        value={userValues.spiders}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Have Ascites?</Form.Label>
-                                    <br />
-                                    <input className="mr-2"
-                                        type="radio"
-                                        name="ascites"
-                                        id="yes"
-                                        value={userValues.ascites}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    Yes
-                                    <input className="ml-4 mr-2"
-                                        type="radio"
-                                        name="ascites"
-                                        id="no"
-                                        value={userValues.ascites}
-                                        onChange={handleInputChange}
-                                        required
-                                    />
-                                    No
-                                </Form.Group>
+
                                 <Form.Group>
                                     <Form.Label>Have Varices?</Form.Label>
                                     <br />
@@ -372,61 +177,195 @@ function MedicalCheckListScreen() {
                                     />
                                     No
                                 </Form.Group>
+
                                 <Form.Group>
-                                    <Form.Label>Bilurubin</Form.Label>
-                                    <Form.Control className="col-5"
-                                        type="number"
-                                        name="bilurubin"
-                                        id="bilurubin"
-                                        value={userValues.bilurubin}
+                                    <Form.Label>Have Spiders?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="spiders"
+                                        id="yes"
+                                        value={userValues.spiders}
                                         onChange={handleInputChange}
                                         required
                                     />
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Alk Phosphate</Form.Label>
-                                    <Form.Control className="col-5"
-                                        type="number"
-                                        name="alk_phosphate"
-                                        id="alk_phosphate"
-                                        value={userValues.alk_phosphate}
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="spiders"
+                                        id="no"
+                                        value={userValues.spiders}
                                         onChange={handleInputChange}
                                         required
                                     />
+                                    No
                                 </Form.Group>
+
                                 <Form.Group>
-                                    <Form.Label>Sgot</Form.Label>
-                                    <Form.Control className="col-5"
-                                        type="number"
-                                        name="sgot"
-                                        id="sgot"
-                                        value={userValues.sgot}
+                                    <Form.Label>Have Big Firm?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="liver_firm"
+                                        id="yes"
+                                        value={userValues.liver_firm}
                                         onChange={handleInputChange}
                                         required
                                     />
-                                </Form.Group>
-                                <Form.Group>
-                                    <Form.Label>Albumin</Form.Label>
-                                    <Form.Control className="col-5"
-                                        type="number"
-                                        name="albumin"
-                                        id="albumin"
-                                        value={userValues.albumin}
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="liver_firm"
+                                        id="no"
+                                        value={userValues.liver_firm}
                                         onChange={handleInputChange}
                                         required
                                     />
+                                    No
                                 </Form.Group>
+
                                 <Form.Group>
-                                    <Form.Label>Protime</Form.Label>
-                                    <Form.Control className="col-5"
-                                        type="number"
-                                        name="protime"
-                                        id="protime"
-                                        value={userValues.protime}
+                                    <Form.Label>Have Big Liver?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="liver_big"
+                                        id="yes"
+                                        value={userValues.liver_big}
                                         onChange={handleInputChange}
                                         required
                                     />
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="liver_big"
+                                        id="no"
+                                        value={userValues.liver_big}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    No
                                 </Form.Group>
+
+                                <Form.Group>
+                                    <Form.Label>Have Anorexia?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="anorexia"
+                                        id="yes"
+                                        value={userValues.anorexia}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="anorexia"
+                                        id="no"
+                                        value={userValues.anorexia}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    No
+                                </Form.Group>
+
+                                <Form.Group>
+                                    <Form.Label>Have Malaise?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="malaise"
+                                        id="yes"
+                                        value={userValues.malaise}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="malaise"
+                                        id="no"
+                                        value={userValues.malaise}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    No
+                                </Form.Group>
+
+                                <Form.Group>
+                                    <Form.Label>Have Fatigue?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="fatigue"
+                                        id="yes"
+                                        value={userValues.fatigue}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="fatigue"
+                                        id="no"
+                                        value={userValues.fatigue}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    No
+                                </Form.Group>
+                                
+                                
+                                
+                                
+                                <Form.Group>
+                                    <Form.Label>Spleen palpable?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="spleen_palpable"
+                                        id="yes"
+                                        value={userValues.spleen_palpable}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="spleen_palpable"
+                                        id="no"
+                                        value={userValues.spleen_palpable}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    No
+                                </Form.Group>
+                                
+                                <Form.Group>
+                                    <Form.Label>Have Ascites?</Form.Label>
+                                    <br />
+                                    <input className="mr-2"
+                                        type="radio"
+                                        name="ascites"
+                                        id="yes"
+                                        value={userValues.ascites}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    Yes
+                                    <input className="ml-4 mr-2"
+                                        type="radio"
+                                        name="ascites"
+                                        id="no"
+                                        value={userValues.ascites}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    No
+                                </Form.Group>
+                                
+                                
                                 <Form.Group>
                                     <Form.Label>Have Histology?</Form.Label>
                                     <br />
@@ -450,8 +389,8 @@ function MedicalCheckListScreen() {
                                     No
                                 </Form.Group>
                                 <div className="text-center">
-                                    <Button variant="outline-primary col-6 mt-3" type="submit">
-                                        Predict
+                                    <Button variant="outline-success col-6 mt-3" type="submit">
+                                        PREDICT
                                     </Button>
                                 </div>
                             </Form>
@@ -484,14 +423,14 @@ function MedicalCheckListScreen() {
                 )}
             </center>
             <div className="container-fluid col-10 mb-3">
-                <h4>Comment:</h4>
+                <h4>Comments predicted from data entered:</h4>
                 {data[0] > data[1] &&
                     <p>
-                        There's a high probability of hepatitis. Get a consultation with your doctor as soon as possible.
+                        There's a severe probability of getting hepatitis. Please consult with your doctor as soon as possible.
                     </p>
                     ||
                     <p>
-                        There's a low probability of hepatitis.
+                        There's very less possibility of hepatitis.
                     </p>
                 }
             </div>
