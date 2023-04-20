@@ -31,11 +31,13 @@ function Navbar(props) {
           <nav className="my-2 my-md-0 me-md-3">
             {profile && profile.role === 1 ? (
               <>
+                <b>WELCOME TO NURSE PROFILE</b>
                 <Link className="p-2 text-dark" to="/patients">PATIENT RECORDS</Link>
                 <Link className="p-2 text-dark" to="/createMotivationaltips">MOTIVATIONAL TIPS</Link>
               </>
             ) : (
               <>
+                <b>WELCOME TO PATIENT PROFILE</b>
                 <Link className="p-2 text-dark" to="/dailyinfo">DAILY INFORMATION</Link>
                 <Link className="p-2 text-dark" to="/medicalChecklist">MEDICAL CHECKLIST</Link>
                 <Link className="p-2 text-dark" to="/getMotivationaltips">MOTIVATIONAL TIPS</Link>
